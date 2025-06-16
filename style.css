@@ -1,0 +1,104 @@
+:root {
+  --azul: #3b80ae;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+  gap:1%
+}
+
+.navbar li {
+  list-style: none;
+  font-size: x-small;
+}
+h1{
+    font-size: x-large;
+    text-align: center;
+    text-decoration: wavy;
+    margin:20px
+}
+section{
+    display: flex;
+    flex-direction:column
+}
+article{
+ text-align: center;
+ border-color: #3b80ae;
+
+}
+img{
+    object-fit: fill;
+}
+h3{
+    z-index: 1;
+    transform:translateY(-150px);
+    color:aliceblue;
+    text-shadow:1px 2px 3px  #3b80ae;
+}
+p{
+    display:none;
+}
+
+ /*. MEDIA QUERYS DE TABLET*/
+@media (min-width:600px )and( max-width:1024px) { 
+    .navbar li{
+        font-size: small;
+    }
+
+    article{
+ text-align: center;
+ box-shadow:1px 2px 3px  #3b80ae;
+ margin:20px;
+ padding: 20px;
+ 
+}
+h3{
+    z-index: 1;
+    transform:translateY(-150px);
+    color:aliceblue;
+    text-shadow:1px 2px 3px  #3b80ae;
+}
+p{
+    display:contents;
+}
+}
+
+/*. MEDIA QUERYS DE DESKTOP*/
+@media (min-width:1024px ) { 
+    .navbar li{
+        font-size: large; 
+        
+    }
+    .navbar ul{
+        gap:30px
+    }
+    article{
+ text-align: center;
+ box-shadow:1px 2px 3px  #3b80ae;
+ margin:20px;
+ padding: 20px;
+ 
+}
+h3{
+    z-index: 1;
+    transform:translateY(-150px);
+    color:aliceblue;
+    text-shadow:1px 2px 3px  #3b80ae;
+}
+}
