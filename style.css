@@ -20,85 +20,148 @@ body {
 
 .navbar ul {
   display: flex;
-  gap:1%
+  gap: 1%;
 }
 
 .navbar li {
   list-style: none;
   font-size: x-small;
 }
-h1{
-    font-size: x-large;
+a {
+  text-decoration: none;
+  color: black;
+  text-decoration-color: darkgray;
+}
+a:hover {
+  color: darkgray;
+}
+h1 {
+  font-size: x-large;
+  text-align: center;
+  text-decoration: wavy;
+  margin: 20px;
+}
+section {
+  display: flex;
+  flex-direction: column;
+}
+article {
+  text-align: center;
+}
+img {
+  object-fit: fill;
+}
+h3 {
+  z-index: 1;
+  transform: translateY(-150px);
+  color: aliceblue;
+  text-shadow: 1px 2px 3px var(--azul);
+}
+p {
+  display: none;
+}
+
+/*. MEDIA QUERYS DE TABLET*/
+@media (min-width: 599px) and (max-width: 1024px) {
+  .navbar li {
+    font-size: small;
+  }
+
+  article {
     text-align: center;
-    text-decoration: wavy;
-    margin:20px
-}
-section{
+    box-shadow: 1px 2px 3px var(--azul);
     display: flex;
-    flex-direction:column
-}
-article{
- text-align: center;
- border-color: #3b80ae;
+    flex-direction: row;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+  }
 
-}
-img{
-    object-fit: fill;
-}
-h3{
-    z-index: 1;
-    transform:translateY(-150px);
-    color:aliceblue;
-    text-shadow:1px 2px 3px  #3b80ae;
-}
-p{
-    display:none;
-}
+  .texto {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+  }
 
- /*. MEDIA QUERYS DE TABLET*/
-@media (min-width:600px )and( max-width:1024px) { 
-    .navbar li{
-        font-size: small;
-    }
+  h3 {
+    z-index: 0;
+    color: black;
+    transform: translateY(0px);
+    text-shadow: 1px 2px 3px gray;
+    font-size: medium;
+  }
 
-    article{
- text-align: center;
- box-shadow:1px 2px 3px  #3b80ae;
- margin:20px;
- padding: 20px;
- 
+  p {
+    display: block;
+    text-align: justify;
+  }
 }
-h3{
-    z-index: 1;
-    transform:translateY(-150px);
-    color:aliceblue;
-    text-shadow:1px 2px 3px  #3b80ae;
-}
-p{
-    display:contents;
-}
-}
-
 /*. MEDIA QUERYS DE DESKTOP*/
-@media (min-width:1024px ) { 
-    .navbar li{
-        font-size: large; 
-        
-    }
-    .navbar ul{
-        gap:30px
-    }
-    article{
- text-align: center;
- box-shadow:1px 2px 3px  #3b80ae;
- margin:20px;
- padding: 20px;
- 
+@media (min-width: 1024px) {
+  .navbar li {
+    font-size: large;
+  }
+
+  .navbar ul {
+    gap: 30px;
+  }
+
+  h1 {
+    font-size: xx-large;
+  }
+
+  section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex:2 2 10%
+  }
+  article {
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 1px 2px 3px var(--azul);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  article:hover{
+    animation: aparece 1s;
+  }
+
+  text {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+  }
+
+  h3 {
+    z-index: 0;
+    color: black;
+    transform: translateY(0px);
+    text-shadow: 1px 2px 3px grey;
+  }
+  p {
+    display:none;
+    text-align: justify;
+  }
+@keyframes aparece {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-h3{
-    z-index: 1;
-    transform:translateY(-150px);
-    color:aliceblue;
-    text-shadow:1px 2px 3px  #3b80ae;
+
+article:hover p {
+  display: block;
+  animation: aparece 1s;
 }
+  
 }
